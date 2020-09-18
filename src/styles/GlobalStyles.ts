@@ -1,11 +1,11 @@
 import { createGlobalStyle } from 'styled-components';
 import normalize from 'styled-normalize';
 
-export const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle`
   ${normalize};
 
   body {
-    background-color: rgb(20, 20, 20);
+    background-color: #1E1E1E;
     font: 1rem/1.5 "Spoqa Han Sans",sans-serif;
     color: #fff;
   }
@@ -19,6 +19,12 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  }
+
+  .tag::before, 
+  .tag::after {font-family: 'Source Code Pro', monospace; font-size: 10px; color: #D78650; margin-left: 10px;}
+  [lang="en"]{
+    font-family: 'Source Code Pro', monospace
   }
 
   .a11yHidden {
@@ -54,3 +60,5 @@ export const GlobalStyle = createGlobalStyle`
       color: inherit;
     }
 `;
+
+export default GlobalStyle;
