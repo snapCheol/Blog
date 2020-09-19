@@ -1,5 +1,28 @@
 import React from 'react';
+import styled from 'styled-components';
 import ContentLayout from '../ContentLayout/ContentLayout';
+import { RiCellphoneFill, RiGithubFill } from 'react-icons/ri';
+import { MdEmail } from 'react-icons/md';
+
+const Contact = styled.ul`
+  margin-top: 25px;
+
+  & li {
+    display: flex;
+    align-items: center;
+
+    & + li {
+      margin-top: 10px;
+    }
+
+    & svg {
+      font-size: 30px;
+    }
+    & span {
+      margin-left: 10px;
+    }
+  }
+`;
 
 const AboutContent = () => {
   return (
@@ -13,6 +36,32 @@ const AboutContent = () => {
         장애를 가진 사람들 위한 접근성도 중요하게 생각 되어 최근에는 접근성 관련
         WAI-ARIA와 여러가지 인터페이스 접근성에도 관심을 가져 공부중입니다.
       </p>
+
+      <Contact>
+        <li>
+          <RiCellphoneFill />
+          <span>
+            <a href="tel:+82-10-5519-1689">010-5519-1689</a>
+          </span>
+        </li>
+        <li>
+          <MdEmail />
+          <span>
+            <a href="mailto:chief1689@naver.com">chief1689@naver.com</a>
+          </span>
+        </li>
+        <li>
+          <RiGithubFill />
+          <span>
+            <a
+              href="https://github.com/snapCheol"
+              target="_blank"
+              rel="noopener noreferrer">
+              https://github.com/snapCheol
+            </a>
+          </span>
+        </li>
+      </Contact>
     </ContentLayout>
   );
 };
