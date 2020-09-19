@@ -12,14 +12,21 @@ const ContentContainer = styled.div`
 
   & h3 {
     margin-bottom: 25px;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 900;
     color: #9980fa;
   }
   & p {
-    font-size: 13px;
+    font-size: 14px;
   }
-
+  @media ${device.mobileM} {
+    & h3 {
+      font-size: 5vw;
+    }
+    & p {
+      font-size: 2.3vw;
+    }
+  }
   @media ${device.laptop} {
     width: 50%;
     padding: 0 5%;

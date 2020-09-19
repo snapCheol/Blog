@@ -4,9 +4,8 @@ import { device } from '../../styles/BreakPoint';
 
 const SectionContainer = styled.section`
   position: relative;
-  padding-top: 50px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   height: 100%;
   z-index: 10;
   & > .inner {
@@ -15,8 +14,8 @@ const SectionContainer = styled.section`
   }
 
   @media ${device.laptop} {
-    align-items: flex-start;
-    margin-top: 100px;
+    /* align-items: flex-start; */
+    /* margin-top: 100px; */
     padding: 0;
   }
 `;

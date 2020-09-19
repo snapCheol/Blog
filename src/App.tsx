@@ -6,6 +6,7 @@ import Main from './components/Main/Main';
 import About from './Pages/About';
 import Home from './Pages/Home';
 import Skills from './Pages/Skills';
+import Works from './Pages/Works';
 import GlobalStyle from './styles/GlobalStyles';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
             <Route path="/" component={Home} exact />
             <Route path="/about" component={About} />
             <Route path="/skills" component={Skills} />
+            <Route path="/works" component={Works} />
           </Switch>
         </Main>
         <Footer />
