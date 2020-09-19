@@ -9,8 +9,7 @@ const MainContainer = styled.main`
   justify-content: space-between;
   position: relative;
   padding: 50px 0;
-
-  min-height: 500px;
+  height: 100vh;
   overflow-y: auto;
 
   &::before,

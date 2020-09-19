@@ -4,9 +4,8 @@ import { device } from '../../styles/BreakPoint';
 
 const SectionContainer = styled.section`
   position: relative;
-  padding-top: 50px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   height: 100%;
   z-index: 10;
   & > .inner {

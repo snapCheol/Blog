@@ -4,6 +4,10 @@ import styled from 'styled-components';
 import { device } from '../../styles/BreakPoint';
 
 const FooterContainer = styled.footer`
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   height: 50px;
   margin-top: 30px;
