@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import { device } from '../../styles/BreakPoint';
 
 const ContentContainer = styled.div`
   display: flex;
+
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
@@ -16,6 +18,17 @@ const ContentContainer = styled.div`
   }
   & p {
     font-size: 13px;
+  }
+
+  @media ${device.laptop} {
+    width: 50%;
+    padding: 0 5%;
+    & h3 {
+      font-size: 2.5rem;
+    }
+    & p {
+      font-size: 1.2rem;
+    }
   }
 `;
 

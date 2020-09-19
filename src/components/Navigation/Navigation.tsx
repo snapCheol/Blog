@@ -1,7 +1,10 @@
 import { CodepenOutlined, HomeOutlined, UserOutlined } from '@ant-design/icons';
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { RootState } from '../../redux';
+import { device } from '../../styles/BreakPoint';
 
 const Nav = styled.nav<NavigationProps>`
   position: absolute;
@@ -29,6 +32,22 @@ const Nav = styled.nav<NavigationProps>`
       font-size: 0.7rem;
     }
   }
+
+  @media ${device.laptop} {
+    position: relative;
+    top: auto;
+    height: auto;
+    transform: translateX(0);
+
+    & > ul {
+      top: 30px;
+      display: block;
+    }
+
+    & > ul > li + li {
+      margin-top: 10px;
+    }
+  }
 `;
 
 const Dimm = styled.div<NavigationProps>`
@@ -46,6 +65,7 @@ type NavigationProps = {
 };
 
 const Navigation = ({ activeMenu, toggleMenu }: NavigationProps) => {
+  const { viewPort } = useSelector((state: RootState) => state.common);
   return (
     <>
       <Nav activeMenu={activeMenu}>
@@ -71,7 +91,9 @@ const Navigation = ({ activeMenu, toggleMenu }: NavigationProps) => {
           </li>
         </ul>
       </Nav>
-      <Dimm activeMenu={activeMenu} onClick={toggleMenu} />
+      {viewPort === 'mobile' && (
+        <Dimm activeMenu={activeMenu} onClick={toggleMenu} />
+      )}
     </>
   );
 };

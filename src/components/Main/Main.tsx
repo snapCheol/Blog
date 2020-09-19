@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Particles from 'react-particles-js';
+import { device } from '../../styles/BreakPoint';
 
 const MainContainer = styled.main`
   display: flex;
@@ -9,7 +10,7 @@ const MainContainer = styled.main`
   position: relative;
   padding: 50px 0;
 
-  min-height: 360px;
+  min-height: 500px;
   overflow-y: auto;
 
   &::before,
@@ -35,6 +36,15 @@ const MainContainer = styled.main`
     opacity: 0.1;
     #tsparticles {
       height: 100%;
+    }
+  }
+
+  @media ${device.laptop} {
+    height: 90vh;
+    padding: 0 0 0 10%;
+    &.tag::before,
+    &.tag::after {
+      font-size: 16px;
     }
   }
 `;

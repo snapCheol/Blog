@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { device } from '../../styles/BreakPoint';
 
 const LogoContainer = styled.div`
   width: 50px;
@@ -16,6 +17,10 @@ const LogoContainer = styled.div`
     > span {
       font-size: 3px;
     }
+  }
+
+  @media ${device.laptop} {
+    width: 100%;
   }
 `;
 

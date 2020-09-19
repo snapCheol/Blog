@@ -1,10 +1,12 @@
 import { GithubOutlined } from '@ant-design/icons';
 import React from 'react';
 import styled from 'styled-components';
+import { device } from '../../styles/BreakPoint';
 
 const FooterContainer = styled.footer`
   display: flex;
   height: 50px;
+  margin-top: 30px;
   text-align: center;
   justify-content: space-around;
   align-items: center;
@@ -24,6 +26,9 @@ const FooterContainer = styled.footer`
       font-size: 7px;
     }
   }
+  @media ${device.laptop} {
+    display: none;
+  }
 `;
 
 const Footer = () => {
@@ -33,8 +38,8 @@ const Footer = () => {
       <div className="github">
         <a
           href="https://github.com/snapCheol"
-          target="_blank
-        ">
+          target="_blank"
+          rel="noopener noreferrer">
           <GithubOutlined />
           <strong>Github</strong>
         </a>
