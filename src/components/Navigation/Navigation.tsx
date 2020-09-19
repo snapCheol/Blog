@@ -1,9 +1,4 @@
-import {
-  CodepenOutlined,
-  HddOutlined,
-  HomeOutlined,
-  UserOutlined,
-} from '@ant-design/icons';
+import { CodepenOutlined, HomeOutlined, UserOutlined } from '@ant-design/icons';
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
