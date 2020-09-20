@@ -17,9 +17,9 @@ const ContentContainer = styled.div`
     color: #9980fa;
   }
   & p {
-    font-size: 14px;
+    font-size: 16px;
   }
-  @media ${device.mobileM} {
+  @media ${device.tablet} {
     & h3 {
       font-size: 5vw;
     }
