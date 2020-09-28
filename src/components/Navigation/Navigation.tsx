@@ -1,4 +1,9 @@
-import { CodepenOutlined, HomeOutlined, UserOutlined } from '@ant-design/icons';
+import {
+  CodepenOutlined,
+  HddOutlined,
+  HomeOutlined,
+  UserOutlined,
+} from '@ant-design/icons';
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -89,12 +94,12 @@ const Navigation = ({ activeMenu, toggleMenu }: NavigationProps) => {
               <span className="textMenu">SKILLS</span>
             </Link>
           </li>
-          {/* <li>
+          <li>
             <Link to="/works" onClick={toggleMenu}>
               <HddOutlined />
               <span className="textMenu">Works</span>
             </Link>
-          </li> */}
+          </li>
         </ul>
       </Nav>
       {viewPort === 'mobile' && (

@@ -5,7 +5,8 @@ import { device } from '../../styles/BreakPoint';
 const SectionContainer = styled.section`
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  margin-top: 10vh;
   height: 100%;
   z-index: 10;
   & > .inner {
@@ -14,8 +15,8 @@ const SectionContainer = styled.section`
   }
 
   @media ${device.laptop} {
-    /* align-items: flex-start; */
-    /* margin-top: 100px; */
+    align-items: flex-start;
+    margin-top: 100px;
     padding: 0;
   }
 `;
